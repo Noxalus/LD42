@@ -12,11 +12,13 @@ public class GameManager : MonoBehaviour
 
     private static GameManager _instance;
 
+    public void Awake()
+    {
+        _instance = this;
+    }
+
     public static GameManager Instance()
     {
-        if (!_instance)
-            _instance = new GameManager();
-
         return _instance;
     }
 
@@ -31,8 +33,14 @@ public class GameManager : MonoBehaviour
         UpdateUI();
     }
 
+    public void IncreaseScore(int amount)
+    {
+        _score += amount;
+    }
+
     private void UpdateUI()
     {
         TimerText.text = TimeSpan.FromSeconds(_gameTimer).ToString(@"mm\:ss\.fff");
+        ScoreText.text = _score.ToString();
     }
 }

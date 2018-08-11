@@ -19,6 +19,9 @@ public class LimitBar : MonoBehaviour
         // Check if a package is stable at the limit
         foreach (var packageBody in _detectedPackages)
         {
+            if (!packageBody)
+                continue;
+
             if (packageBody.velocity.magnitude < 0.1f)
             {
                 _gameWillBeOver = true;
