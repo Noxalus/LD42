@@ -2,12 +2,15 @@
 
 public class PlayerArmsManager : MonoBehaviour
 {
-    public PackageDetector PackageDetector;
+    public GameObject Player;
     public Rigidbody2D LeftArmRigidBody;
     public Rigidbody2D RightArmRigidBody;
     public Transform LeftHand;
     public Transform RightHand;
 
+    private PackageDetector _packageDetector;
+    private CharacterController2D _playerController;
+    private Rigidbody2D _playerRigidBody;
     private GameObject _nearestPackage;
 
     // Picking up
@@ -18,7 +21,11 @@ public class PlayerArmsManager : MonoBehaviour
 
     public void Start()
     {
-        PackageDetector.OnNearestPackageChanged.AddListener(SetNearestPackage);
+        _packageDetector = Player.GetComponent<PackageDetector>();
+        _playerController = Player.GetComponent<CharacterController2D>();
+        _playerRigidBody = Player.GetComponent<Rigidbody2D>();
+        
+        _packageDetector.OnNearestPackageChanged.AddListener(SetNearestPackage);
     }
 
     public void SetNearestPackage(GameObject package)
@@ -73,6 +80,8 @@ public class PlayerArmsManager : MonoBehaviour
         if (!package)
             return;
 
+        package = package.transform.parent.gameObject;
+
         _pickupTargetJoint = package.GetComponent<TargetJoint2D>();
 
         if (!_pickupTargetJoint)
@@ -83,8 +92,7 @@ public class PlayerArmsManager : MonoBehaviour
         _pickingUp = true;
         _pickedObject = package;
 
-        // Disable collision box
-        package.GetComponent<BoxCollider2D>().enabled = false;
+        _pickedObject.GetComponent<Package>().PickedUp();
     }
 
     public Vector2 GetPickupPosition()
@@ -94,19 +102,28 @@ public class PlayerArmsManager : MonoBehaviour
 
     public void ReleasePackage()
     {
-        var forceDirection = (_pickedObject.transform.position - PackageDetector.transform.position);
-        forceDirection.y += 0.5f;
-        forceDirection.Normalize();
+        if (!_pickingUp)
+            return;
 
         if (_isInsideHands)
         {
-            _pickedObject.GetComponent<Rigidbody2D>().AddForce(forceDirection * 500f);
+            var forceDirection = Player.GetComponent<Rigidbody2D>().velocity;
+            //forceDirection.y += 0.5f;
+
+            if (forceDirection != Vector2.zero)
+            {
+                //forceDirection.Normalize();
+                //_pickedObject.GetComponent<Rigidbody2D>().AddForce(forceDirection * 500f);
+                _playerController.IsFacingRight();
+                _pickedObject.GetComponent<Rigidbody2D>().velocity = Player.GetComponent<Rigidbody2D>().velocity;
+            }
         }
 
-        // Disable collision box
-        _pickedObject.GetComponent<BoxCollider2D>().enabled = true;
+        _pickedObject.GetComponent<Package>().Released();
 
         Destroy(_pickupTargetJoint);
+        _pickedObject = null;
+
         _pickingUp = false;
         _isInsideHands = false;
     }

@@ -21,7 +21,7 @@ public class PackageSpawner : MonoBehaviour
 
         while (!_disabled)
         {
-            Instantiate<GameObject>(PackagePrefabs[Random.Range(0, PackagePrefabs.Count)], transform.position, Quaternion.identity);
+            Instantiate(PackagePrefabs[Random.Range(0, PackagePrefabs.Count)], transform.position, Quaternion.identity);
             yield return new WaitForSeconds(1);
         }
     }

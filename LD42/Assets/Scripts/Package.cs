@@ -1,0 +1,50 @@
+﻿using UnityEngine;
+
+public class Package : MonoBehaviour
+{
+    public Rigidbody2D Rigidbody;
+    public BoxCollider2D PhysicsBox;
+
+    private bool _pickingUp;
+    private bool _pickedUp;
+    private bool _canColliderWithPlayer;
+    private int _ignoredByPlayerLayer;
+
+    private void Start()
+    {
+        _pickingUp = false;
+        _pickedUp = false;
+        _canColliderWithPlayer = false;
+        _ignoredByPlayerLayer = LayerMask.NameToLayer("PlayerIgnoredPackage");
+    }
+
+    void Update ()
+    {
+        if (!_pickingUp && _pickedUp && _canColliderWithPlayer && PhysicsBox.gameObject.layer == _ignoredByPlayerLayer)
+        {
+            PhysicsBox.gameObject.layer = LayerMask.NameToLayer("Package");
+            _pickedUp = false;
+        }
+    }
+
+    public void PickedUp()
+    {
+        _pickingUp = true;
+        _canColliderWithPlayer = false;
+        PhysicsBox.gameObject.layer = _ignoredByPlayerLayer;
+    }
+
+    public void Released()
+    {
+        _pickingUp = false;
+        _pickedUp = true;
+    }
+
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Player" && _pickedUp)
+        {
+            _canColliderWithPlayer = true;
+        }
+    }
+}

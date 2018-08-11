@@ -132,6 +132,10 @@ public class CharacterController2D : MonoBehaviour
 		}
 	}
 
+    public bool IsFacingRight()
+    {
+        return m_FacingRight;
+    }
 
 	private void Flip()
 	{
