@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4142136"
-     inkscape:cx="178.43232"
-     inkscape:cy="170.39157"
+     inkscape:zoom="1"
+     inkscape:cx="-38.376408"
+     inkscape:cy="410.01415"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -1478,5 +1478,53 @@
        height="17.212158"
        x="88.867119"
        y="269.87213" />
+    <rect
+       y="194.66249"
+       x="-61.92635"
+       height="17.212158"
+       width="17.212158"
+       id="rect2306"
+       style="opacity:1;fill:#e9be79;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.32291663;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="D:\Projets\LD42\LD42\Assets\Graphics\Sprites\package1.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <g
+       id="g2318">
+      <rect
+         y="127.66665"
+         x="62.177082"
+         height="28.839582"
+         width="16.404167"
+         id="rect2308"
+         style="opacity:1;fill:#1db245;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.32291663;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         y="152.80206"
+         x="58.472916"
+         height="7.1437497"
+         width="23.547916"
+         id="rect2314"
+         style="opacity:1;fill:#1db245;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.32291663;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+    <g
+       id="g2330"
+       transform="matrix(1.6535434,0,0,1.6535434,-166.3698,-106.55132)"
+       inkscape:export-filename="D:\Projets\LD42\LD42\Assets\Graphics\Sprites\pipe.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100">
+      <rect
+         y="127.66665"
+         x="62.177082"
+         height="28.839582"
+         width="16.404167"
+         id="rect2326"
+         style="opacity:1;fill:#1db245;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.32291663;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         y="152.80206"
+         x="58.472916"
+         height="7.1437497"
+         width="23.547916"
+         id="rect2328"
+         style="opacity:1;fill:#1db245;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.32291663;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
   </g>
 </svg>
