@@ -1,33 +1,26 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class PlayerArm : MonoBehaviour
+public class GameObjectEvent : UnityEvent<GameObject> {}
+
+public class PackageDetector : MonoBehaviour
 {
-    public Rigidbody2D RigidBody;
+    public UnityEvent<GameObject> OnNearestPackageChanged = new GameObjectEvent();
 
     private List<GameObject> _nearPackages = new List<GameObject>();
-    private GameObject _nearestPackage;
     private bool _dirty = false;
 
-    void Start ()
+    void Start()
     {
         _nearPackages = new List<GameObject>();
     }
-	
-	void Update ()
+
+    void Update()
     {
         if (_dirty)
         {
-            _nearestPackage = FindNearestPackage();
-        }
-
-        if (_nearestPackage)
-        {
-            var posX = transform.position.x - _nearestPackage.transform.position.x;
-            var posY = transform.position.y - _nearestPackage.transform.position.y;
-            var angle = (-Mathf.Atan2(posX, posY) * Mathf.Rad2Deg) + 180f;
-
-            RigidBody.rotation = angle;
+            OnNearestPackageChanged.Invoke(FindNearestPackage());
         }
     }
 
