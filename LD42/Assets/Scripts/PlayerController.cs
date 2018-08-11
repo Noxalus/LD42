@@ -2,16 +2,23 @@
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed;
-    public Rigidbody2D RigidBody;
+    public CharacterController2D Controller;
+    public float speed = 40f;
+
+    private float _horizontalMove = 0f;
+    private bool _jump;
+
+    private void Update()
+    {
+        _horizontalMove = Input.GetAxis("Horizontal");
+
+        if (Input.GetButtonDown("Jump"))
+            _jump = true;
+    }
 
     void FixedUpdate()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
-
-        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
-
-        RigidBody.AddForce(movement * speed * Time.fixedDeltaTime);
+        Controller.Move(_horizontalMove * speed * Time.fixedDeltaTime, false, _jump);
+        _jump = false;
     }
 }
