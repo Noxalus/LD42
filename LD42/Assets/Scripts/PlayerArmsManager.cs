@@ -12,6 +12,7 @@ public class PlayerArmsManager : MonoBehaviour
 
     // Picking up
     private bool _pickingUp;
+    private bool _isInsideHands;
     private GameObject _pickedObject;
     private TargetJoint2D _pickupTargetJoint;
 
@@ -44,7 +45,12 @@ public class PlayerArmsManager : MonoBehaviour
         {
             if (_pickupTargetJoint)
             {
-                _pickupTargetJoint.target = GetPickupPosition();
+                var pickupPosition = GetPickupPosition();
+                _pickupTargetJoint.target = pickupPosition;
+
+                var distance = Vector2.Distance(_pickedObject.transform.position, pickupPosition);
+                Debug.Log("Distance: " + distance);
+                _isInsideHands = distance < 0.7f;
             }
         }
 
@@ -64,6 +70,9 @@ public class PlayerArmsManager : MonoBehaviour
 
     public void PickupPackage(GameObject package)
     {
+        if (!package)
+            return;
+
         _pickupTargetJoint = package.GetComponent<TargetJoint2D>();
 
         if (!_pickupTargetJoint)
@@ -85,10 +94,20 @@ public class PlayerArmsManager : MonoBehaviour
 
     public void ReleasePackage()
     {
+        var forceDirection = (_pickedObject.transform.position - PackageDetector.transform.position);
+        forceDirection.y += 0.5f;
+        forceDirection.Normalize();
+
+        if (_isInsideHands)
+        {
+            _pickedObject.GetComponent<Rigidbody2D>().AddForce(forceDirection * 500f);
+        }
+
         // Disable collision box
         _pickedObject.GetComponent<BoxCollider2D>().enabled = true;
 
         Destroy(_pickupTargetJoint);
         _pickingUp = false;
+        _isInsideHands = false;
     }
 }
