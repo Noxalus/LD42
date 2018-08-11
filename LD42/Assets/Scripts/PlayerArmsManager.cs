@@ -5,8 +5,12 @@ public class PlayerArmsManager : MonoBehaviour
     public GameObject Player;
     public Rigidbody2D LeftArmRigidBody;
     public Rigidbody2D RightArmRigidBody;
+    public Transform LeftArmAnchor;
+    public Transform RightArmAnchor;
     public Transform LeftHand;
     public Transform RightHand;
+    public HingeJoint2D LeftArmJoint;
+    public HingeJoint2D RightArmJoint;
 
     private PackageDetector _packageDetector;
     private CharacterController2D _playerController;
@@ -38,6 +42,9 @@ public class PlayerArmsManager : MonoBehaviour
 
     public void Update()
     {
+        LeftArmJoint.connectedAnchor = LeftArmAnchor.localPosition;
+        RightArmJoint.connectedAnchor = RightArmAnchor.localPosition;
+
         // Pickup nearest package
         if (Input.GetButtonDown("Fire1"))
         {
