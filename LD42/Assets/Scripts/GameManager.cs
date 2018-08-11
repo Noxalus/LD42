@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     private int _score;
     private float _gameTimer;
+    private bool _gameIsOver = false;
 
     private static GameManager _instance;
 
@@ -24,18 +25,37 @@ public class GameManager : MonoBehaviour
 
     void Start ()
     {
-	}
+        _gameIsOver = false;
+    }
 	
 	void Update ()
     {
+        if (GameIsOver())
+            return;
+        
         _gameTimer += Time.deltaTime;
-
         UpdateUI();
     }
 
     public void IncreaseScore(int amount)
     {
         _score += amount;
+    }
+
+    public void GameOver(bool notAPackageDeath = false)
+    {
+        if (notAPackageDeath)
+        {
+            Debug.Log("Warning, you can't be considered as a package!");
+        }
+
+        Debug.Log("Game Over!");
+        _gameIsOver = true;
+    }
+
+    public bool GameIsOver()
+    {
+        return _gameIsOver;
     }
 
     private void UpdateUI()

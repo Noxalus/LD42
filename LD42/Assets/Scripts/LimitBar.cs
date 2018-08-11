@@ -1,13 +1,15 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class LimitBar : MonoBehaviour
 {
-    private List<Rigidbody2D> _detectedPackages = new List<Rigidbody2D>();
-
-    private bool _gameWillBeOver = false;
     public float SecondsBeforeGameOver = 5f;
+    public TextMeshProUGUI GameOverTimerText;
 
+    private List<Rigidbody2D> _detectedPackages = new List<Rigidbody2D>();
+    private bool _gameWillBeOver = false;
     private float _gameOverTimer;
     private bool _gameIsOver = false;
 
@@ -33,16 +35,20 @@ public class LimitBar : MonoBehaviour
         {
             _gameOverTimer -= Time.deltaTime;
 
-            Debug.Log("Game over timer: " + _gameOverTimer);
+            GameOverTimerText.alpha = 0.5f;
+            GameOverTimerText.text = TimeSpan.FromSeconds(_gameOverTimer).ToString(@"s\.fff");
 
             if (_gameOverTimer < 0)
             {
                 _gameIsOver = true;
-                Debug.Log("Game is over!");
+                GameOverTimerText.alpha = 1f;
+                GameOverTimerText.text = "Game Over";
+                GameManager.Instance().GameOver();
             }
         }
         else
         {
+            GameOverTimerText.alpha = 0;
             _gameOverTimer = SecondsBeforeGameOver;
         }
 
