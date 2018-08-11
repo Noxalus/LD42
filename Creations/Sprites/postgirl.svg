@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="300.64119"
-     inkscape:cy="282.02787"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="178.43232"
+     inkscape:cy="170.39157"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -1471,5 +1471,12 @@
            sodipodi:nodetypes="cssc" />
       </g>
     </g>
+    <rect
+       style="opacity:1;fill:#e9be79;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.32291663;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2304"
+       width="17.212158"
+       height="17.212158"
+       x="88.867119"
+       y="269.87213" />
   </g>
 </svg>
