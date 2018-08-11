@@ -53,7 +53,6 @@ public class PackageDetector : MonoBehaviour
         {
             _nearPackages.Add(collision.gameObject);
             _dirty = true;
-            Debug.Log("A package is detected!");
         }
     }
 
@@ -62,7 +61,6 @@ public class PackageDetector : MonoBehaviour
         if (collision.tag == "Package")
         {
             _nearPackages.Remove(collision.gameObject);
-            Debug.Log("A package is out!");
             _dirty = true;
         }
     }

@@ -63,7 +63,6 @@ public class PlayerArmsManager : MonoBehaviour
                 _pickupTargetJoint.target = pickupPosition;
 
                 var distance = Vector2.Distance(_pickedObject.transform.position, pickupPosition);
-                Debug.Log("Distance: " + distance);
                 _isInsideHands = distance < 0.7f;
             }
         }
