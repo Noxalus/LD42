@@ -1,11 +1,14 @@
 ﻿using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public TextMeshProUGUI TimerText;
     public TextMeshProUGUI ScoreText;
+
+    public CanvasGroup GameOverUIGroup;
 
     private int _score;
     private float _gameTimer;
@@ -26,6 +29,9 @@ public class GameManager : MonoBehaviour
     void Start ()
     {
         _gameIsOver = false;
+        GameOverUIGroup.alpha = 0;
+        GameOverUIGroup.interactable = false;
+        GameOverUIGroup.blocksRaycasts = false;
     }
 	
 	void Update ()
@@ -35,6 +41,11 @@ public class GameManager : MonoBehaviour
         
         _gameTimer += Time.deltaTime;
         UpdateUI();
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void IncreaseScore(int amount)
@@ -51,6 +62,11 @@ public class GameManager : MonoBehaviour
 
         Debug.Log("Game Over!");
         _gameIsOver = true;
+
+        // Show game over UI
+        GameOverUIGroup.alpha = 1;
+        GameOverUIGroup.interactable = true;
+        GameOverUIGroup.blocksRaycasts = true;
     }
 
     public bool GameIsOver()
