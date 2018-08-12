@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI TimerText;
     public TextMeshProUGUI ScoreText;
+    public TextMeshProUGUI GameOverSubText;
 
     public CanvasGroup GameOverUIGroup;
 
@@ -43,7 +44,12 @@ public class GameManager : MonoBehaviour
 	void Update ()
     {
         if (GameIsOver())
+        {
+            if (Input.anyKeyDown)
+                Restart();
+
             return;
+        }
         
         _gameTimer += Time.deltaTime;
         UpdateUI();
@@ -64,13 +70,18 @@ public class GameManager : MonoBehaviour
 
     public void GameOver(bool notAPackageDeath = false)
     {
+        GameOverSubText.text = "You died drowned under a mountain of packages...";
+
         if (notAPackageDeath)
         {
             Debug.Log("Warning, you can't be considered as a package!");
+            GameOverSubText.text = "You died from a bad fall, sad story...";
         }
 
         Debug.Log("Game Over!");
         _gameIsOver = true;
+
+
 
         // Show game over UI
         GameOverUIGroup.alpha = 1;

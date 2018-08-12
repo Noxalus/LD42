@@ -56,6 +56,8 @@ public class LimitBar : MonoBehaviour
             {
                 _gameIsOver = true;
                 GameOverTimerText.alpha = 0f;
+                _warningOverlayColor.a = 0;
+                GameOverWarningOverlay.color = _warningOverlayColor;
                 GameManager.Instance().GameOver();
             }
         }

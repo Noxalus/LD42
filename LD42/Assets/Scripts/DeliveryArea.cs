@@ -14,7 +14,7 @@ public class DeliveryArea : MonoBehaviour
         }
         else if (collision.tag == "Player")
         {
-            GameManager.Instance().GameOver();
+            GameManager.Instance().GameOver(true);
         }
     }
 }
