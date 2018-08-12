@@ -27,6 +27,7 @@ public class Package : MonoBehaviour
         if (!_pickingUp && _pickedUp && _canColliderWithPlayer && PhysicsBox.gameObject.layer == _ignoredByPlayerLayer)
         {
             PhysicsBox.gameObject.layer = LayerMask.NameToLayer("Package");
+            PhysicsBox.gameObject.tag = "Package";
             _pickedUp = false;
         }
     }
@@ -36,6 +37,7 @@ public class Package : MonoBehaviour
         GameManager.Instance().PlaySound(PickupSound);
         _pickingUp = true;
         _canColliderWithPlayer = false;
+        PhysicsBox.gameObject.tag = "PlayerIgnoredPackage";
         PhysicsBox.gameObject.layer = _ignoredByPlayerLayer;
 
         GameManager.Instance().OnPackagePickedUp();

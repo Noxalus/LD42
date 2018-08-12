@@ -49,7 +49,7 @@ public class PackageDetector : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Package")
+        if (collision.tag == "Package" || collision.tag == "PlayerIgnoredPackage")
         {
             _nearPackages.Add(collision.gameObject);
             _dirty = true;
@@ -58,7 +58,7 @@ public class PackageDetector : MonoBehaviour
 
     public void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Package")
+        if (collision.tag == "Package" || collision.tag == "PlayerIgnoredPackage")
         {
             _nearPackages.Remove(collision.gameObject);
             _dirty = true;

@@ -51,8 +51,11 @@ public class CharacterController2D : MonoBehaviour
 		Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
 		for (int i = 0; i < colliders.Length; i++)
 		{
-			if (colliders[i].gameObject != gameObject)
+			if (colliders[i].gameObject != gameObject && colliders[i].gameObject.tag != "PlayerIgnoredPackage" && !colliders[i].isTrigger)
 			{
+                
+                Debug.Log("Grounded on " + colliders[i].gameObject.name + " (tag: " + colliders[i].gameObject.tag + ")");
+
 				m_Grounded = true;
 				if (!wasGrounded)
 					OnLandEvent.Invoke();
