@@ -87,4 +87,11 @@ public class LimitBar : MonoBehaviour
             _detectedPackages.Remove(collision.transform.parent.gameObject.GetComponent<Rigidbody2D>());
         }
     }
+
+    public void IncreaseHeight(float amount)
+    {
+        var newPosition = transform.position;
+        newPosition.y += amount;
+        transform.position = newPosition;
+    }
 }

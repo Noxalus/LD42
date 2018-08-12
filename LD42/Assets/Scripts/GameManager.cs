@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI TimerText;
     public TextMeshProUGUI ScoreText;
     public TextMeshProUGUI GameOverSubText;
+    public LimitBar LimitBar;
 
     public CanvasGroup GameOverUIGroup;
 
@@ -20,7 +21,7 @@ public class GameManager : MonoBehaviour
     private int _score;
     private float _gameTimer;
     private bool _gameIsOver = false;
-
+    private int _difficultyLevel = 0;
     private static GameManager _instance;
 
     public void Awake()
@@ -52,6 +53,9 @@ public class GameManager : MonoBehaviour
         }
         
         _gameTimer += Time.deltaTime;
+
+        LimitBar.IncreaseHeight(0.0001f);
+
         UpdateUI();
     }
 
@@ -81,8 +85,6 @@ public class GameManager : MonoBehaviour
         Debug.Log("Game Over!");
         _gameIsOver = true;
 
-
-
         // Show game over UI
         GameOverUIGroup.alpha = 1;
         GameOverUIGroup.interactable = true;
@@ -104,5 +106,10 @@ public class GameManager : MonoBehaviour
     {
         AudioSource.clip = clip;
         AudioSource.Play();
+    }
+
+    public int GetDifficultyLevel()
+    {
+        return _difficultyLevel;
     }
 }
