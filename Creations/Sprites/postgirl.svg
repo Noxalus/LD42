@@ -27,8 +27,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="-1635.3801"
-     inkscape:cy="1266.172"
+     inkscape:cx="-1518.0758"
+     inkscape:cy="931.95617"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -49,7 +49,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -2015,5 +2015,72 @@
        inkscape:export-filename="D:\Projets\LD42\LD42\Assets\Graphics\Sprites\wall.png"
        inkscape:export-xdpi="100"
        inkscape:export-ydpi="100" />
+    <rect
+       inkscape:export-ydpi="100"
+       inkscape:export-xdpi="100"
+       inkscape:export-filename="D:\Projets\LD42\LD42\Assets\Graphics\Sprites\package1.png"
+       style="opacity:1;fill:#e9be79;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.32291663;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1155"
+       width="17.212158"
+       height="17.212158"
+       x="-37.716976"
+       y="194.66249" />
+    <g
+       id="g1185">
+      <rect
+         style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.65800095;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1157"
+         width="0.93055385"
+         height="2.7916615"
+         x="-26.452452"
+         y="206.30542"
+         ry="0.46527693" />
+      <path
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.1071286px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m -26.893656,206.60036 c -0.584849,-0.15671 0.908222,-1.57309 0.908222,-1.57309 0,0 1.463946,1.41352 0.884117,1.56889 -0.497716,0.13337 -1.296092,0.13717 -1.792339,0.004 z"
+         id="path1159"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="scss" />
+    </g>
+    <rect
+       style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.65800095;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1161"
+       width="0.93055385"
+       height="2.7916615"
+       x="-24.104273"
+       y="206.30542"
+       ry="0.46527693" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.1071286px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -24.545479,206.60036 c -0.584849,-0.15671 0.908222,-1.57309 0.908222,-1.57309 0,0 1.463946,1.41352 0.884117,1.56889 -0.497716,0.13337 -1.296092,0.13717 -1.792339,0.004 z"
+       id="path1163"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="scss" />
+    <rect
+       ry="0.38860676"
+       y="209.25754"
+       x="-27.301691"
+       height="0.77721351"
+       width="4.9609375"
+       id="rect1165"
+       style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.32291663;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <g
+       id="g1197">
+      <rect
+         transform="rotate(-90)"
+         ry="3.3171511"
+         y="-409.70609"
+         x="-22.282297"
+         height="19.902906"
+         width="6.6343021"
+         id="rect1187"
+         style="opacity:1;fill:#ff1d1d;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.32291667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="scss"
+         inkscape:connector-curvature="0"
+         id="path1189"
+         d="m -407.60333,25.427825 c -1.11725,4.169629 -11.21521,-6.47509 -11.21521,-6.47509 0,0 10.07757,-10.4370744 11.18526,-6.303234 0.95085,3.548422 0.97795,9.240374 0.0285,12.778324 z"
+         style="fill:#ff1d1d;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.32291667;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+    </g>
   </g>
 </svg>

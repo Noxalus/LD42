@@ -46,11 +46,11 @@ public class PlayerArmsManager : MonoBehaviour
         RightArmJoint.connectedAnchor = RightArmAnchor.localPosition;
 
         // Pickup nearest package
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Pickup"))
         {
             PickupPackage(_nearestPackage);
         }
-        else if (Input.GetButtonUp("Fire1"))
+        else if (Input.GetButtonUp("Pickup"))
         {
             ReleasePackage();
         }

@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 50528379162619012}
   - component: {fileID: 95229707732384790}
   m_Layer: 0
-  m_Name: PackageSpawner
+  m_Name: Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PackagePrefabs:
   - {fileID: 1894644207894230, guid: e3002b0a0c8e3c64a8f89b2874870737, type: 2}
-  StartDelay: 3
+  StartDelay: 1
   Animator: {fileID: 95229707732384790}
   SpawnFrequencyMin:
   - 5

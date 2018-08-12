@@ -22,9 +22,9 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
             _jump = true;
 
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetButtonDown("Crouch"))
             _crouch = true;
-        else if (Input.GetButtonUp("Fire2"))
+        else if (Input.GetButtonUp("Crouch"))
             _crouch = false;
 
         Animator.SetBool("Crouching", _crouch);

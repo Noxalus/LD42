@@ -37,6 +37,8 @@ public class Package : MonoBehaviour
         _pickingUp = true;
         _canColliderWithPlayer = false;
         PhysicsBox.gameObject.layer = _ignoredByPlayerLayer;
+
+        GameManager.Instance().OnPackagePickedUp();
     }
 
     public void Released()

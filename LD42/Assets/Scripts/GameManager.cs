@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -18,11 +19,21 @@ public class GameManager : MonoBehaviour
 
     public Animator ScoreAnimator;
 
+    public List<Transform> SpawnerHolders;
+    public GameObject SpawnerPrefab;
+
+    public CanvasGroup PickupTutorial;
+    public CanvasGroup DeliveryTutorial;
+
     private int _score;
     private float _gameTimer;
     private bool _gameIsOver = false;
     private int _difficultyLevel = 0;
     private static GameManager _instance;
+    private bool _firstScore = true;
+    private List<PackageSpawner> _spawners = new List<PackageSpawner>();
+
+    private static bool _tutorialFinished = false;
 
     public void Awake()
     {
@@ -40,6 +51,9 @@ public class GameManager : MonoBehaviour
         GameOverUIGroup.alpha = 0;
         GameOverUIGroup.interactable = false;
         GameOverUIGroup.blocksRaycasts = false;
+
+        PickupTutorial.alpha = _tutorialFinished ? 0 : 1;
+        DeliveryTutorial.alpha = 0;
     }
 	
 	void Update ()
@@ -66,10 +80,28 @@ public class GameManager : MonoBehaviour
 
     public void IncreaseScore(int amount)
     {
+        if (!_tutorialFinished)
+        {
+            DeliveryTutorial.alpha = 0;
+            _tutorialFinished = true;
+        }
+
+        if (_firstScore)
+        {
+            _firstScore = false;
+            AddSpawner();
+        }
+
         _score += amount;
         ScoreAnimator.SetTrigger("ScoreIncreased");
 
         PlaySound(ScoreSound);
+    }
+
+    public void AddSpawner()
+    {
+        if (SpawnerHolders.Count >= _spawners.Count)
+            Instantiate(SpawnerPrefab, SpawnerHolders[_spawners.Count]);
     }
 
     public void GameOver(bool notAPackageDeath = false)
@@ -111,5 +143,14 @@ public class GameManager : MonoBehaviour
     public int GetDifficultyLevel()
     {
         return _difficultyLevel;
+    }
+
+    public void OnPackagePickedUp()
+    {
+        if (!_tutorialFinished)
+        {
+            PickupTutorial.alpha = 0;
+            DeliveryTutorial.alpha = 1;
+        }
     }
 }
