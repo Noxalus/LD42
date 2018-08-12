@@ -137,6 +137,11 @@ public class CharacterController2D : MonoBehaviour
         return m_FacingRight;
     }
 
+    public bool IsGrounded()
+    {
+        return m_Grounded;
+    }
+
 	private void Flip()
 	{
 		// Switch the way the player is labelled as facing.

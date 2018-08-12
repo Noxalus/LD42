@@ -735,6 +735,8 @@ MonoBehaviour:
   Animator: {fileID: 95040212321830940}
   Rigidbody: {fileID: 50731332779492870}
   speed: 40
+  JumpSound: {fileID: 8300000, guid: 9d0ea9777fbd54d4c80160271dc21925, type: 3}
+  CrouchSound: {fileID: 8300000, guid: a429785d943775743b33fe826276ff15, type: 3}
 --- !u!114 &114880686871057964
 MonoBehaviour:
   m_ObjectHideFlags: 1

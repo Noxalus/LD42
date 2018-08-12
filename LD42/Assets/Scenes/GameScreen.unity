@@ -542,7 +542,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4113623370219574, guid: 36e295edc917b124185bb47186d146df, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -4.66
+      value: -5.5099998
       objectReference: {fileID: 0}
     - target: {fileID: 4113623370219574, guid: 36e295edc917b124185bb47186d146df, type: 2}
       propertyPath: m_LocalPosition.z
@@ -614,6 +614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AudioSource: {fileID: 519420034}
+  ScoreSound: {fileID: 8300000, guid: 86846d85069448d46aae7a281477b810, type: 3}
   TimerText: {fileID: 2031462722}
   ScoreText: {fileID: 763402286}
   GameOverUIGroup: {fileID: 650119472}
@@ -2319,7 +2320,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4113623370219574, guid: 36e295edc917b124185bb47186d146df, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -4.79
+      value: -5.64
       objectReference: {fileID: 0}
     - target: {fileID: 4113623370219574, guid: 36e295edc917b124185bb47186d146df, type: 2}
       propertyPath: m_LocalPosition.z

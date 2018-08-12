@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 {
     public AudioSource AudioSource;
 
+    public AudioClip ScoreSound;
+
     public TextMeshProUGUI TimerText;
     public TextMeshProUGUI ScoreText;
 
@@ -56,6 +58,8 @@ public class GameManager : MonoBehaviour
     {
         _score += amount;
         ScoreAnimator.SetTrigger("ScoreIncreased");
+
+        PlaySound(ScoreSound);
     }
 
     public void GameOver(bool notAPackageDeath = false)

@@ -45,6 +45,15 @@ public class Package : MonoBehaviour
         _pickedUp = true;
     }
 
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag != "Player")
+        {
+            if (collision.relativeVelocity.magnitude > 2.5f)
+                GameManager.Instance().PlaySound(FallSound);
+        }
+    }
+
     public void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Player" && _pickedUp)

@@ -6,10 +6,14 @@ public class PlayerController : MonoBehaviour
     public Animator Animator;
     public Rigidbody2D Rigidbody;
     public float speed = 40f;
+    public AudioClip JumpSound;
+    public AudioClip CrouchSound;
 
     private float _horizontalMove = 0f;
     private bool _jump = false;
     private bool _crouch = false;
+
+    private bool _wasCrouched = false;
 
     private void Update()
     {
@@ -29,7 +33,14 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (Controller.IsGrounded() && _jump)
+            GameManager.Instance().PlaySound(JumpSound);
+        if (!_wasCrouched && _crouch)
+            GameManager.Instance().PlaySound(CrouchSound);
+
         Controller.Move(_horizontalMove * speed * Time.fixedDeltaTime, _crouch, _jump);
         _jump = false;
+
+        _wasCrouched = _crouch;
     }
 }
