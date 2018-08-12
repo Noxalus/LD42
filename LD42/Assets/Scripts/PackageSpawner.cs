@@ -29,11 +29,10 @@ public class PackageSpawner : MonoBehaviour
             new Color(0.23f, 0.54f, 0.09f),
             new Color(0.96f, 0.82f, 0.16f),
             new Color(0.95f, 0.60f, 0.11f),
-            new Color(0.95f, 0.04f, 0.09f),
-            new Color(0.02f, 0.02f, 0.02f)
+            new Color(0.95f, 0.04f, 0.09f)
         };
 
-        Sprite.color = difficultyToColor[0];
+        Sprite.color = difficultyToColor[_difficultyLevel];
     }
 
     private IEnumerator SpawnPackage()
@@ -69,6 +68,6 @@ public class PackageSpawner : MonoBehaviour
     public void SetDifficultyLevel(int level)
     {
         _difficultyLevel = level;
-        Sprite.color = difficultyToColor[level];
+        Sprite.color = difficultyToColor[_difficultyLevel];
     }
 }

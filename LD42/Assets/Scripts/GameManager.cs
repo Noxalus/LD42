@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     public CanvasGroup PickupTutorial;
     public CanvasGroup DeliveryTutorial;
 
-    private const int MaxDifficulty = 4;
+    private const int MaxDifficulty = 6;
 
     private int _score;
     private float _gameTimer;
@@ -108,42 +108,35 @@ public class GameManager : MonoBehaviour
         {
             if (_difficultyLevel == 1)
             {
-                _spawners[0].SetDifficultyLevel(2);
+                _spawners[0].SetDifficultyLevel(1);
             }
             if (_difficultyLevel == 2)
             {
                 _spawners[0].SetDifficultyLevel(2);
                 AddSpawner();
-                //LimitBar.IncreaseHeight(0.1f);
             }
             if (_difficultyLevel == 3)
             {
-                _spawners[1].SetDifficultyLevel(2);
-                //LimitBar.IncreaseHeight(0.1f);
+                _spawners[1].SetDifficultyLevel(1);
             }
             if (_difficultyLevel == 4)
             {
                 AddSpawner();
-                _spawners[0].SetDifficultyLevel(3);
-                //LimitBar.IncreaseHeight(0.1f);
+                _spawners[2].SetDifficultyLevel(1);
             }
             if (_difficultyLevel == 5)
             {
                 _spawners[2].SetDifficultyLevel(2);
-                _spawners[1].SetDifficultyLevel(3);
-                //LimitBar.IncreaseHeight(0.1f);
+                _spawners[1].SetDifficultyLevel(2);
             }
             if (_difficultyLevel == 6)
             {
-                _spawners[2].SetDifficultyLevel(3);
-                _spawners[0].SetDifficultyLevel(4);
-                _spawners[1].SetDifficultyLevel(4);
-                //LimitBar.IncreaseHeight(0.1f);
+                _spawners[0].SetDifficultyLevel(3);
             }
             if (_difficultyLevel == 7)
             {
-                _spawners[2].SetDifficultyLevel(4);
-                //LimitBar.IncreaseHeight(0.1f);
+                _spawners[1].SetDifficultyLevel(3);
+                _spawners[2].SetDifficultyLevel(3);
             }
         }
     }

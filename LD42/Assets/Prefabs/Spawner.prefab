@@ -156,12 +156,10 @@ MonoBehaviour:
   - 3
   - 2
   - 1
-  - 1
   - 0
   SpawnFrequencyMax:
   - 8
   - 6
-  - 5
   - 3
   - 1
 --- !u!212 &212970694377498174
