@@ -53,9 +53,6 @@ public class CharacterController2D : MonoBehaviour
 		{
 			if (colliders[i].gameObject != gameObject && colliders[i].gameObject.tag != "PlayerIgnoredPackage" && !colliders[i].isTrigger)
 			{
-                
-                Debug.Log("Grounded on " + colliders[i].gameObject.name + " (tag: " + colliders[i].gameObject.tag + ")");
-
 				m_Grounded = true;
 				if (!wasGrounded)
 					OnLandEvent.Invoke();
@@ -143,6 +140,11 @@ public class CharacterController2D : MonoBehaviour
     public bool IsGrounded()
     {
         return m_Grounded;
+    }
+
+    public bool CanStandUp()
+    {
+        return !Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround);
     }
 
 	private void Flip()

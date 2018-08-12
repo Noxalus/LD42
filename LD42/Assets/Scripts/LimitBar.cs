@@ -102,7 +102,7 @@ public class LimitBar : MonoBehaviour
         var newPosition = transform.position;
         newPosition.y = Mathf.Min(newPosition.y + amount, MaxLimit);
 
-        if (newPosition.y >= -0.25f && newPosition.y <= 0.6f)
+        if (newPosition.y >= -0.4f && newPosition.y <= 0.6f)
             newPosition.y = 0.6f;
 
         transform.position = newPosition;

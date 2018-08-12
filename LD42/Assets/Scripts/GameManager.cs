@@ -112,25 +112,25 @@ public class GameManager : MonoBehaviour
             }
             if (_difficultyLevel == 2)
             {
-                _spawners[0].SetDifficultyLevel(2);
                 AddSpawner();
             }
             if (_difficultyLevel == 3)
             {
+                _spawners[0].SetDifficultyLevel(2);
                 _spawners[1].SetDifficultyLevel(1);
             }
             if (_difficultyLevel == 4)
             {
                 AddSpawner();
-                _spawners[2].SetDifficultyLevel(1);
             }
             if (_difficultyLevel == 5)
             {
-                _spawners[2].SetDifficultyLevel(2);
+                _spawners[2].SetDifficultyLevel(1);
                 _spawners[1].SetDifficultyLevel(2);
             }
             if (_difficultyLevel == 6)
             {
+                _spawners[2].SetDifficultyLevel(2);
                 _spawners[0].SetDifficultyLevel(3);
             }
             if (_difficultyLevel == 7)

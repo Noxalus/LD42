@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     private float _horizontalMove = 0f;
     private bool _jump = false;
     private bool _crouch = false;
+    private bool _wantToStandUp = false;
 
     private bool _wasCrouched = false;
 
@@ -25,7 +26,18 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Crouch"))
             _crouch = true;
         else if (Input.GetButtonUp("Crouch"))
+        {
+            if (Controller.CanStandUp())
+                _crouch = false;
+            else
+                _wantToStandUp = true;
+        }
+
+        if (_crouch && _wantToStandUp && Controller.CanStandUp())
+        {
             _crouch = false;
+            _wantToStandUp = false;
+        }
 
         Animator.SetBool("Crouching", _crouch);
         Animator.SetFloat("Speed", Rigidbody.velocity.magnitude);

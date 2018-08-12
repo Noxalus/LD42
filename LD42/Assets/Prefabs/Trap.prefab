@@ -56,7 +56,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 20
+  m_AngularDrag: 10
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -79,7 +79,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.96493304}
-    oldSize: {x: 0.47, y: 1.4}
+    oldSize: {x: 0.42, y: 1.35}
     newSize: {x: 0.47, y: 1.4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -148,7 +148,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.0057992935, y: -3.0270002}
+  m_ConnectedAnchor: {x: -6.6757994, y: 1.333}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
