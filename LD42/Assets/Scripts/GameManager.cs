@@ -82,6 +82,7 @@ public class GameManager : MonoBehaviour
     {
         if (!_tutorialFinished)
         {
+            PickupTutorial.alpha = 0;
             DeliveryTutorial.alpha = 0;
             _tutorialFinished = true;
         }
