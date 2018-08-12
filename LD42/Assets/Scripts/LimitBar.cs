@@ -2,16 +2,27 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LimitBar : MonoBehaviour
 {
     public float SecondsBeforeGameOver = 5f;
     public TextMeshProUGUI GameOverTimerText;
+    public Image GameOverWarningOverlay;
 
     private List<Rigidbody2D> _detectedPackages = new List<Rigidbody2D>();
     private bool _gameWillBeOver = false;
     private float _gameOverTimer;
     private bool _gameIsOver = false;
+
+    private Color _warningOverlayColor;
+
+    public void Start()
+    {
+        _warningOverlayColor = GameOverWarningOverlay.color;
+        _warningOverlayColor.a = 0;
+        GameOverWarningOverlay.color = _warningOverlayColor;
+    }
 
     public void Update()
     {
@@ -36,18 +47,22 @@ public class LimitBar : MonoBehaviour
             _gameOverTimer -= Time.deltaTime;
 
             GameOverTimerText.alpha = 0.5f;
-            GameOverTimerText.text = TimeSpan.FromSeconds(_gameOverTimer).ToString(@"s\.fff");
+            GameOverTimerText.text = Mathf.CeilToInt((float)TimeSpan.FromSeconds(_gameOverTimer).TotalSeconds).ToString();
+
+            _warningOverlayColor.a = (1 - (_gameOverTimer / SecondsBeforeGameOver)) * 0.5f;
+            GameOverWarningOverlay.color = _warningOverlayColor;
 
             if (_gameOverTimer < 0)
             {
                 _gameIsOver = true;
-                GameOverTimerText.alpha = 1f;
-                GameOverTimerText.text = "Game Over";
+                GameOverTimerText.alpha = 0f;
                 GameManager.Instance().GameOver();
             }
         }
         else
         {
+            _warningOverlayColor.a = 0;
+            GameOverWarningOverlay.color = _warningOverlayColor;
             GameOverTimerText.alpha = 0;
             _gameOverTimer = SecondsBeforeGameOver;
         }

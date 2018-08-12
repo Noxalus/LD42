@@ -10,6 +10,10 @@ public class Package : MonoBehaviour
     private bool _canColliderWithPlayer;
     private int _ignoredByPlayerLayer;
 
+    // Audio
+    public AudioClip FallSound;
+    public AudioClip PickupSound;
+
     private void Start()
     {
         _pickingUp = false;
@@ -29,6 +33,7 @@ public class Package : MonoBehaviour
 
     public void PickedUp()
     {
+        GameManager.Instance().PlaySound(PickupSound);
         _pickingUp = true;
         _canColliderWithPlayer = false;
         PhysicsBox.gameObject.layer = _ignoredByPlayerLayer;

@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public AudioSource AudioSource;
+
     public TextMeshProUGUI TimerText;
     public TextMeshProUGUI ScoreText;
 
@@ -78,5 +80,11 @@ public class GameManager : MonoBehaviour
     {
         TimerText.text = TimeSpan.FromSeconds(_gameTimer).ToString(@"mm\:ss\.fff");
         ScoreText.text = _score.ToString();
+    }
+
+    public void PlaySound(AudioClip clip)
+    {
+        AudioSource.clip = clip;
+        AudioSource.Play();
     }
 }

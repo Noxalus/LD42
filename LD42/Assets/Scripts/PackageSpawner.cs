@@ -21,8 +21,11 @@ public class PackageSpawner : MonoBehaviour
 
         while (!_disabled)
         {
+            if (GameManager.Instance().GameIsOver())
+                break;
+
             Instantiate(PackagePrefabs[Random.Range(0, PackagePrefabs.Count)], transform.position, Quaternion.identity);
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.1f);
         }
     }
 }

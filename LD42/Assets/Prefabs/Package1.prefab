@@ -185,6 +185,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rigidbody: {fileID: 50843718720394302}
   PhysicsBox: {fileID: 61610007691759902}
+  FallSound: {fileID: 8300000, guid: 98acd475368cf4944b53ffc82e54ab67, type: 3}
+  PickupSound: {fileID: 8300000, guid: 1b34913b0dd90434a982d61ba34c0225, type: 3}
 --- !u!212 &212682024445300488
 SpriteRenderer:
   m_ObjectHideFlags: 1
