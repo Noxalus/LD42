@@ -91,9 +91,9 @@ public class GameManager : MonoBehaviour
             _difficultyLevel == 1 && (_score >= 15 || GetRealGameTime() >= 60) ||
             _difficultyLevel == 2 && (_score >= 30 || GetRealGameTime() >= 90) ||
             _difficultyLevel == 3 && (_score >= 40 || GetRealGameTime() >= 120) ||
-            _difficultyLevel == 4 && (_score >= 50 || GetRealGameTime() >= 140) ||
-            _difficultyLevel == 5 && (_score >= 60 || GetRealGameTime() >= 160) ||
-            _difficultyLevel == 6 && (_score >= 100 || GetRealGameTime() >= 300))
+            _difficultyLevel == 4 && (_score >= 80 || GetRealGameTime() >= 300) ||
+            _difficultyLevel == 5 && (_score >= 100 || GetRealGameTime() >= 500) ||
+            _difficultyLevel == 6 && (_score >= 150 || GetRealGameTime() >= 1000))
         {
             IncreaseDifficulty();
         }
