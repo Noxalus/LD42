@@ -2,6 +2,8 @@
 
 public class DeliveryArea : MonoBehaviour
 {
+    public AudioClip PlayerScream;
+
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (GameManager.Instance().GameIsOver())
@@ -14,6 +16,7 @@ public class DeliveryArea : MonoBehaviour
         }
         else if (collision.tag == "Player")
         {
+            GameManager.Instance().PlaySound(PlayerScream);
             GameManager.Instance().GameOver(true);
         }
     }

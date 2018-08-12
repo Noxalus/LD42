@@ -419,7 +419,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 'You can jump space or A
 
-    You can crouch with shift or RT'
+    You can crouch with shift or B'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 294188f738a83434f8031b5206706c6e, type: 2}
   m_sharedMaterial: {fileID: 21370434023125960, guid: 294188f738a83434f8031b5206706c6e,
@@ -488,7 +488,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 99586705}
-    characterCount: 55
+    characterCount: 54
     spriteCount: 0
     spaceCount: 12
     wordCount: 13
