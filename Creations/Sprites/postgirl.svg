@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35355339"
-     inkscape:cx="-1279.927"
-     inkscape:cy="955.03008"
+     inkscape:zoom="1"
+     inkscape:cx="-892.93524"
+     inkscape:cy="-164.53401"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -1486,23 +1486,23 @@
          style="opacity:1;fill:#1db245;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.32291663;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
-       id="g2330"
-       transform="matrix(1.6535434,0,0,1.6535434,-166.3698,-106.55132)"
        inkscape:export-filename="D:\Projets\LD42\LD42\Assets\Graphics\Sprites\pipe.png"
        inkscape:export-xdpi="100"
-       inkscape:export-ydpi="100">
+       inkscape:export-ydpi="100"
+       id="g1210">
       <rect
-         y="127.66665"
-         x="62.177082"
-         height="28.839582"
-         width="16.404167"
+         y="239.25487"
+         x="-439.23135"
+         height="47.6875"
+         width="27.125002"
          id="rect2326"
-         style="opacity:1;fill:#1db245;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.32291663;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:#1db245;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.32291667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <rect
-         y="152.80206"
-         x="58.472916"
-         height="7.1437497"
-         width="23.547916"
+         ry="5.90625"
+         y="280.81735"
+         x="-445.35635"
+         height="11.8125"
+         width="38.9375"
          id="rect2328"
          style="opacity:1;fill:#1db245;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.32291663;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
@@ -1610,7 +1610,7 @@
        style="opacity:1;fill:#e9be79;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:5.00684881;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        ry="0" />
     <path
-       style="fill:#e9be79;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2.64583325;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#e9be79;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.32291667;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m -456.70856,38.229548 c 0,47.59679 -0.21651,123.553762 -0.21651,123.553762 l 177.41448,-0.1142 177.41501,0.1142 c 0,0 -0.21652,-75.956972 -0.21652,-123.553762 h -32.17943 l -105.30003,70.838572 -39.71903,0.0951 -39.71901,-0.0951 -105.30004,-70.838572 z"
        id="path2402"
        inkscape:export-filename="D:\Projets\LD42\LD42\Assets\Graphics\Sprites\floor.png"
@@ -1994,18 +1994,18 @@
     <rect
        inkscape:export-ydpi="100"
        inkscape:export-xdpi="100"
-       inkscape:export-filename="D:\Projets\LD42\LD42\Assets\Graphics\Sprites\wall.png"
+       inkscape:export-filename="D:\Projets\LD42\LD42\Assets\Graphics\Sprites\trap.png"
        ry="0.11887696"
        y="1.9026363"
        x="-455.46869"
        height="32.860622"
        width="9.3910551"
        id="rect2545"
-       style="opacity:1;fill:#b1b1b1;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2.64583333;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:#b1b1b1;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.32291667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:transform-center-x="-0.20614708"
        inkscape:transform-center-y="16.089625" />
     <rect
-       style="opacity:1;fill:#e9be79;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:3.24186468;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:#e9be79;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.32291667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect2539"
        width="15.345833"
        height="161.2699"
@@ -2084,6 +2084,307 @@
          id="path1189"
          d="m -407.60333,25.427825 c -1.11725,4.169629 -11.21521,-6.47509 -11.21521,-6.47509 0,0 10.07757,-10.4370744 11.18526,-6.303234 0.95085,3.548422 0.97795,9.240374 0.0285,12.778324 z"
          style="fill:#ff1d1d;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.32291667;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+    </g>
+    <g
+       id="g1661-0"
+       transform="matrix(-1.4646195,-0.05065681,0.05065681,-1.4646195,-157.23804,793.39442)"
+       inkscape:export-filename="D:\Projets\LD42\LD42\Assets\Graphics\Sprites\Postgirl\arm.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100">
+      <g
+         id="g1659-3">
+        <path
+           sodipodi:nodetypes="cscscscscc"
+           inkscape:connector-curvature="0"
+           id="path1651-6"
+           d="m 119.75546,280.3275 c 0,0 -0.58756,0.99157 -0.35974,1.20425 0.12132,0.11326 0.45937,-0.1921 0.45937,-0.1921 0,0 -0.14319,0.98351 0.2088,1.06073 0.3155,0.0692 0.56795,-0.78511 0.56795,-0.78511 0,0 0.36224,0.74038 0.65147,0.64312 0.3146,-0.10579 0.14199,-0.98556 0.14199,-0.98556 0,0 0.61591,0.12787 0.68488,-0.0919 0.13453,-0.42867 -1.10907,-0.93697 -1.10907,-0.93697 z"
+           style="opacity:1;fill:#efbd99;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+        <path
+           sodipodi:nodetypes="cccccc"
+           inkscape:connector-curvature="0"
+           id="path1653-6"
+           d="m 121.15062,273.47956 c 0,0 -0.20421,4.26239 -0.20421,6.8186 l -1.27567,0.14174 c -0.0249,-2.65947 -0.3415,-6.91972 -0.3415,-6.91972 l 1.82138,-0.0406 c 1e-5,10e-4 0,-2e-5 0,-2e-5 z"
+           style="opacity:1;fill:#337bc1;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+        <path
+           sodipodi:nodetypes="ccccc"
+           inkscape:connector-curvature="0"
+           id="path1655-9"
+           d="m 119.67552,279.86549 1.2737,-0.0417 -3e-5,0.43431 -1.2403,0.12111 z"
+           style="opacity:1;fill:#f2f2f2;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path1657-4"
+           d="m 119.17577,273.32674 h 2.11769 v 0.35917 h -2.11769 z"
+           style="opacity:1;fill:#337bc1;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.10166248;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      </g>
+    </g>
+    <g
+       transform="translate(-172.78783,122.60271)"
+       inkscape:export-filename="D:\Projets\LD42\LD42\Assets\Graphics\Sprites\Postgirl\leg.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100"
+       id="g1225">
+      <path
+         style="opacity:1;fill:#e8b698;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.79374999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m -135.36709,283.35127 c -1.99126,0.28211 -2.74053,-5.89871 -3.23643,-8.97694 -0.15249,-0.94658 1.41,-2.5281 2.38597,-2.57496 0.97597,-0.0469 2.90606,1.39414 2.69308,2.38597 -0.60435,2.81431 -0.87646,9.02905 -1.84262,9.16593 z"
+         id="path1663-9"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="sszss" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.79374999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m -138.07198,277.33318 c 1.25583,0.3032 2.42553,0.5459 4.02189,-0.0177 -0.15236,1.62956 -0.44244,3.17648 -0.75004,4.7129 -0.54403,-0.11742 -0.96989,-0.35301 -1.96075,-0.0236 -0.55338,-1.54889 -1.17983,-3.09256 -1.3111,-4.6716 z"
+         id="path1665-2"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m -136.71912,282.10083 c -0.0708,-0.41486 1.91899,-0.0725 1.91899,-0.0725 0,0 -0.0967,1.2281 -0.56696,1.32289 -0.63325,0.12763 -1.30123,-0.95277 -1.35203,-1.25044 z"
+         id="path1667-8"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="scss" />
+    </g>
+    <path
+       style="fill:#1a6ba2;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.79374999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -306.09497,393.18312 3.42541,-5.40979 c 3.33763,0.3863 6.78377,0.41604 10.55971,-0.63783 l 2.14974,5.59877 c 0.27929,0.72738 -0.8944,1.28692 -2.31511,1.08668 -0.98457,0.7755 -2.0167,1.28145 -3.18916,0.99219 -1.11981,0.75845 -2.20322,0.75272 -3.26006,0.18899 -0.91245,0.29748 -1.80589,0.68245 -3.02381,-0.42522 -0.9794,0.5196 -1.82243,0.47428 -2.36235,-0.82683 -1.2698,0.4955 -2.31657,-0.0423 -1.98437,-0.56696 z"
+       id="path1671-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sccscccccs"
+       inkscape:export-filename="D:\Projets\LD42\LD42\Assets\Graphics\Sprites\Postgirl\skirt.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <g
+       transform="translate(-172.78783,122.60271)"
+       id="g1297"
+       inkscape:export-filename="D:\Projets\LD42\LD42\Assets\Graphics\Sprites\Postgirl\torso.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100">
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="path1709-9"
+         d="m -120.95592,261.05265 c -1.32992,-6.30139 -0.43594,-8.15498 -0.20045,-11.32554 l -11.25873,0.83521 c 1.09854,3.45424 0.67555,7.17699 0.30068,10.89124 3.38479,0.50231 6.89378,0.76865 11.1585,-0.40091 z"
+         style="opacity:1;fill:#347abf;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.79374999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m -130.50997,247.34939 c -2.06597,-0.41554 2.984,3.95301 5.0318,5.92951 0.92933,-2.02373 2.8342,-3.91739 2.78758,-6.07125 -3.05257,1.87608 -5.18536,0.71714 -7.81938,0.14174 z"
+         id="path1711-6"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccc" />
+      <g
+         transform="translate(-229.96022,-15.565915)"
+         id="g1717-1">
+        <path
+           sodipodi:nodetypes="cccccc"
+           inkscape:connector-curvature="0"
+           id="path1713-6"
+           d="m 99.077041,262.66285 c 2.660779,0.32207 5.260519,1.01036 8.218539,-0.45102 v 1.41987 c -1.43262,0.7641 -2.40786,0.81673 -3.4578,0.98556 -2.56169,-0.1701 -3.71813,-0.54686 -4.794149,-0.93544 z"
+           style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+        <path
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 103.81352,264.65939 v -1.57096"
+           id="path1715-3"
+           inkscape:connector-curvature="0" />
+      </g>
+      <path
+         style="fill:#030000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m -126.6575,250.33723 -0.0473,0.80062 c -0.62388,1.08058 0.24276,2.43561 1.03527,2.43561 0.53307,0 1.08168,-1.21671 0.36451,-2.45888 l -0.0177,-0.81953 c 0,0 0.41211,-0.62584 0.3072,-0.93751 -0.1379,-0.40966 -0.72417,-0.7557 -1.06675,-0.73727 -0.32461,0.0175 -0.85573,0.41488 -0.95117,0.82317 -0.0736,0.31473 0.37594,0.89379 0.37594,0.89379 z"
+         id="path1719-3"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccsccasac" />
+      <path
+         style="fill:#1a6ba3;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m -132.46669,250.80602 1.20272,-2.85645 5.52913,4.91108 v 1.00226 l -3.20723,-1.01896 -0.0501,-1.16931 -1.10248,0.73499 z"
+         id="path1721-9"
+         inkscape:connector-curvature="0" />
+      <path
+         style="fill:#1a6ba3;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m -125.63293,253.19474 0.0983,0.64676 2.30708,-2.45083 0.0334,-1.06908 0.7276,0.28455 1.1934,-0.93602 -1.11919,-2.35531 z"
+         id="path1723-7"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccccccc" />
+      <path
+         style="opacity:1;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m -126.23429,250.12113 c 0.92405,4.0137 0.93668,7.86656 0.8032,11.69363"
+         id="path1727-1"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
+      <circle
+         style="opacity:1;fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle1729-7"
+         cx="-126.4276"
+         cy="258.00433"
+         r="0.45922863" />
+      <circle
+         r="0.45922863"
+         cy="256.40906"
+         cx="-126.32738"
+         id="circle1731-0"
+         style="opacity:1;fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+    <g
+       transform="translate(-172.78783,122.60271)"
+       id="g1254"
+       inkscape:export-filename="D:\Projets\LD42\LD42\Assets\Graphics\Sprites\Postgirl\face.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100">
+      <path
+         style="opacity:1;fill:#f5c19a;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.79374999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m -122.64484,237.49846 -0.98221,-5.94006 -10.94469,0.79512 c 0,0 -2.13171,3.86212 -1.26285,5.63605 2.37521,4.84939 13.27727,2.89199 13.18975,-0.49111 z"
+         id="path1739-4"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccsc" />
+      <ellipse
+         style="opacity:1;fill:#fc8888;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.26458332;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="ellipse1741-5"
+         cx="-132.31499"
+         cy="236.92551"
+         rx="0.83020598"
+         ry="0.64311731" />
+      <ellipse
+         style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.26458332;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="ellipse1743-4"
+         cx="-131.59001"
+         cy="236.14206"
+         rx="0.52618688"
+         ry="0.51449382" />
+      <ellipse
+         ry="0.64311731"
+         rx="0.83020598"
+         cy="236.36424"
+         cx="-124.24681"
+         id="ellipse1745-6"
+         style="opacity:1;fill:#fc8888;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.26458332;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <ellipse
+         ry="0.51449382"
+         rx="0.52618688"
+         cy="235.53401"
+         cx="-125.01852"
+         id="ellipse1747-1"
+         style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.26458332;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <g
+         style="opacity:1"
+         transform="translate(-264.73868,-23.767578)"
+         id="g1755-0">
+        <path
+           sodipodi:nodetypes="ccsc"
+           inkscape:connector-curvature="0"
+           id="path1749-6"
+           d="m 135.68605,261.07895 c 0.56419,0.0595 1.09904,0.14825 1.96444,-0.0935 0,0 0.008,2.34889 -0.81851,2.43215 -0.86416,0.087 -1.14593,-2.33865 -1.14593,-2.33865 z"
+           style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+        <ellipse
+           ry="0.47992238"
+           rx="0.69866532"
+           cy="262.81876"
+           cx="136.74409"
+           id="ellipse1751-8"
+           style="opacity:1;fill:#f37777;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.26481915;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <path
+           style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 135.68605,261.07895 c 0.56419,0.0595 1.09904,0.14825 1.96444,-0.0935 0,0 0.008,2.34889 -0.81851,2.43215 -0.86416,0.087 -1.14593,-2.33865 -1.14593,-2.33865 z"
+           id="path1753-0"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccsc" />
+      </g>
+    </g>
+    <g
+       transform="translate(-172.78783,122.60271)"
+       id="g1264">
+      <path
+         style="opacity:1;fill:#1b6ca4;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.79374999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m -139.89865,225.99424 0.0468,-2.40877 c 4.20069,-4.34599 8.92166,-4.6597 13.86795,-3.22728 l 0.30402,2.99342 z"
+         id="path1777-5"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         style="opacity:1;fill:#327bc0;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.79374999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m -139.85185,223.58547 c 3.20221,-2.80858 6.43441,-5.58106 13.85755,-3.3073 0.79695,-2.55684 3.19471,-5.4598 1.02526,-7.37526 -2.09214,-1.08053 -4.65977,0.40661 -7.17682,1.62058 -10.08574,2.70247 -11.55953,6.83714 -7.70599,9.06198 z"
+         id="path1779-4"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         style="opacity:1;fill:#fdd42e;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.13229167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m -128.94308,221.09336 c 0.22929,-0.0921 0.44143,-0.24712 0.76005,-0.0117 0,0 0.21543,-0.60937 0.46772,-0.59634 0.24839,0.0128 0.39756,0.63142 0.39756,0.63142 0,0 0.2835,1.30962 -1.1693,1.30962 -1.51557,0 -1.22777,-1.32131 -1.22777,-1.32131 0,0 0.16481,-0.69123 0.43264,-0.6782 0.24898,0.0121 0.3391,0.66651 0.3391,0.66651 z"
+         id="path1781-2"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccscscsc" />
+      <path
+         style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m -139.81878,225.83442 c 3.41463,-1.37628 5.7344,-3.07777 14.18828,-3.27421 1.24528,-0.0289 3.23001,0.64402 2.48047,1.02526 -4.17765,2.12488 -11.12869,1.51954 -16.66875,2.24895 z"
+         id="path1783-5"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cssc" />
+    </g>
+    <path
+       sodipodi:nodetypes="cscssscsccasccccsscssc"
+       inkscape:connector-curvature="0"
+       id="path1871-4"
+       d="m -283.90979,345.22572 c -0.14031,0.0468 -1.21392,2.12799 -2.24506,2.12814 -0.40805,6e-5 -0.88866,-0.84191 -0.88866,-0.84191 0,0 -1.35144,1.22886 -1.94106,0.84191 -0.46273,-0.30367 0,-1.66042 0,-1.66042 0,-1.09594 -1.69287,-0.21751 -2.0112,-0.74835 -0.58953,-0.98311 0.003,-1.85808 0.53788,-2.57247 0,0 -1.04739,-0.28147 -1.30961,-0.70158 -0.22306,-0.35734 -0.0468,-1.26285 -0.0468,-1.26285 0.32638,0.68153 0.78056,0.94769 1.35639,0.81851 0,0 -0.36848,-1.83844 0.18709,-2.43215 3.69696,-3.95076 13.82105,-5.08872 16.06624,-2.31522 0.26037,0.32164 1.35639,-0.21043 1.35639,-0.21043 0.0269,0.47225 0.0868,0.95768 -0.18713,1.30962 l -0.93544,0.0234 c 0.74053,1.46497 0.35057,2.84919 0.28063,4.25627 0,0 1.15546,-0.68181 1.49671,-0.30402 0.33385,0.36959 -0.0701,1.09795 -0.44433,1.42655 -0.27351,0.24014 -1.07576,0.18709 -1.07576,0.18709 0,0 1.19555,1.7839 0.77174,2.57247 -0.44714,0.83198 -1.77035,0.75578 -2.71279,0.81851 -2.78123,0.18514 -8.25522,-1.33307 -8.25522,-1.33307 z"
+       style="opacity:1;fill:#f8c326;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.79374999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="D:\Projets\LD42\LD42\Assets\Graphics\Sprites\Postgirl\hair-back.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <g
+       id="g1910-2"
+       style="opacity:1;stroke-width:0.79374999;stroke-miterlimit:4;stroke-dasharray:none"
+       transform="translate(-415.26746,66.331273)"
+       inkscape:export-filename="D:\Projets\LD42\LD42\Assets\Graphics\Sprites\Postgirl\hair-front.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100">
+      <g
+         id="g1906-4"
+         transform="translate(-0.042809,-0.08365583)"
+         style="stroke-width:0.79374999;stroke-miterlimit:4;stroke-dasharray:none">
+        <g
+           id="g1900-1"
+           style="stroke-width:0.79374999;stroke-miterlimit:4;stroke-dasharray:none">
+          <path
+             style="fill:#f8c326;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.79374999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             d="m 128.67023,261.839 c 0.66082,0.61662 2.54079,0.58617 2.59585,-0.78343 0,0 -0.99708,0.51944 -1.26284,0.18709 -0.85077,-1.06392 0.1745,-3.88853 1.47332,-3.81193 1.27844,0.0754 2.55688,0.71017 3.83532,-0.72497 1.46378,0.88923 2.61912,2.25514 6.05699,0.0935 -0.0427,-0.49611 0.55936,-2 -0.25073,-2.33518 -1.94799,-0.80599 -6.36753,-0.0736 -6.36753,-0.0736 0,0 -3.71595,0.47727 -4.79414,1.80073 -0.97349,1.92779 -2.69793,4.33054 -1.28624,5.64779 z"
+             id="path1894-3"
+             inkscape:connector-curvature="0"
+             sodipodi:nodetypes="ascssccsca" />
+          <ellipse
+             style="opacity:1;fill:#f8c326;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79374999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             id="ellipse1896-8"
+             cx="-21.909462"
+             cy="291.93555"
+             rx="0.42094952"
+             ry="0.26309344"
+             transform="rotate(-33.13092)" />
+          <ellipse
+             transform="matrix(0.39220729,-0.91987686,0.77707264,0.62941093,0,0)"
+             ry="1.2899866"
+             rx="2.0323646"
+             cy="228.48308"
+             cx="-125.89378"
+             id="ellipse1898-8"
+             style="opacity:1;fill:#f8c326;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.80941367;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        </g>
+        <ellipse
+           transform="rotate(-129.21459)"
+           ry="0.59117836"
+           rx="0.91777343"
+           cy="-66.23735"
+           cx="-284.05106"
+           id="ellipse1902-2"
+           style="opacity:1;fill:#f8c326;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79374999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <ellipse
+           style="opacity:1;fill:#f8c326;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.80273789;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="ellipse1904-0"
+           cx="-143.86725"
+           cy="281.6127"
+           rx="1.397397"
+           ry="0.82769424"
+           transform="matrix(0.72002895,-0.69394403,0.82959407,0.55836697,0,0)" />
+      </g>
+      <ellipse
+         style="opacity:1;fill:#f8c326;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79374999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="ellipse1908-8"
+         cx="249.49554"
+         cy="152.5827"
+         rx="0.40048668"
+         ry="0.38923863"
+         transform="rotate(29.662824)" />
     </g>
   </g>
 </svg>
