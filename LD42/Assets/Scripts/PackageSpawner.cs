@@ -7,17 +7,33 @@ public class PackageSpawner : MonoBehaviour
     public List<GameObject> PackagePrefabs;
     public float StartDelay;
     public Animator Animator;
+    public SpriteRenderer Sprite;
 
     public List<float> SpawnFrequencyMin;
     public List<float> SpawnFrequencyMax;
 
+    private List<Color> difficultyToColor;
+
     private bool _disabled;
     private bool _started;
+
+    private int _difficultyLevel = 0;
 
     public void Start()
     {
         _disabled = false;
         _started = false;
+
+        difficultyToColor = new List<Color>()
+        {
+            new Color(0.23f, 0.54f, 0.09f),
+            new Color(0.96f, 0.82f, 0.16f),
+            new Color(0.95f, 0.60f, 0.11f),
+            new Color(0.95f, 0.04f, 0.09f),
+            new Color(0.02f, 0.02f, 0.02f)
+        };
+
+        Sprite.color = difficultyToColor[0];
     }
 
     private IEnumerator SpawnPackage()
@@ -31,8 +47,8 @@ public class PackageSpawner : MonoBehaviour
 
             Animator.SetTrigger("AddPackage");
             Instantiate(PackagePrefabs[Random.Range(0, PackagePrefabs.Count)], transform.position, Quaternion.identity);
-            var difficultyLevel = GameManager.Instance().GetDifficultyLevel();
-            yield return new WaitForSeconds(Random.Range(SpawnFrequencyMin[difficultyLevel], SpawnFrequencyMax[difficultyLevel]));
+
+            yield return new WaitForSeconds(Random.Range(SpawnFrequencyMin[_difficultyLevel], SpawnFrequencyMax[_difficultyLevel]));
         }
     }
 
@@ -48,5 +64,11 @@ public class PackageSpawner : MonoBehaviour
     {
         _started = true;
         StartCoroutine(SpawnPackage());
+    }
+
+    public void SetDifficultyLevel(int level)
+    {
+        _difficultyLevel = level;
+        Sprite.color = difficultyToColor[level];
     }
 }

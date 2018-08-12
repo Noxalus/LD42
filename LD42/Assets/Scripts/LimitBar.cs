@@ -10,6 +10,7 @@ public class LimitBar : MonoBehaviour
     public TextMeshProUGUI GameOverTimerText;
     public Image GameOverWarningOverlay;
 
+    private const float MaxLimit = 3.5f;
     private List<Rigidbody2D> _detectedPackages = new List<Rigidbody2D>();
     private bool _gameWillBeOver = false;
     private float _gameOverTimer;
@@ -91,7 +92,7 @@ public class LimitBar : MonoBehaviour
     public void IncreaseHeight(float amount)
     {
         var newPosition = transform.position;
-        newPosition.y += amount;
+        newPosition.y = Mathf.Min(newPosition.y + amount, MaxLimit);
         transform.position = newPosition;
     }
 }

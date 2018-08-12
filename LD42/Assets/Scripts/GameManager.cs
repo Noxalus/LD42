@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
     public CanvasGroup PickupTutorial;
     public CanvasGroup DeliveryTutorial;
 
+    private const int MaxDifficulty = 4;
+
     private int _score;
     private float _gameTimer;
     private bool _gameIsOver = false;
@@ -32,8 +34,11 @@ public class GameManager : MonoBehaviour
     private static GameManager _instance;
     private bool _firstScore = true;
     private List<PackageSpawner> _spawners = new List<PackageSpawner>();
+    private float _tutorialTimeOffset;
 
     private static bool _tutorialFinished = false;
+
+    private float _delayBeforeRestart = 1f;
 
     public void Awake()
     {
@@ -60,17 +65,92 @@ public class GameManager : MonoBehaviour
     {
         if (GameIsOver())
         {
-            if (Input.anyKeyDown)
+            _delayBeforeRestart -= Time.deltaTime;
+
+            if (_delayBeforeRestart < 0 && Input.anyKeyDown)
+            {
                 Restart();
+            }
 
             return;
         }
-        
-        _gameTimer += Time.deltaTime;
 
-        LimitBar.IncreaseHeight(0.0001f);
+        if (_tutorialFinished)
+        {
+            _gameTimer += Time.deltaTime;
+            LimitBar.IncreaseHeight(0.0001f * (_difficultyLevel + 1));
+            UpdateDifficulty();
 
-        UpdateUI();
+            UpdateUI();
+        }
+    }
+
+    public void UpdateDifficulty()
+    {
+        if (_difficultyLevel == 0 && (_score >= 5 || GetRealGameTime() >= 30) ||
+            _difficultyLevel == 1 && (_score >= 15 || GetRealGameTime() >= 60) ||
+            _difficultyLevel == 2 && (_score >= 30 || GetRealGameTime() >= 90) ||
+            _difficultyLevel == 3 && (_score >= 40 || GetRealGameTime() >= 120) ||
+            _difficultyLevel == 4 && (_score >= 50 || GetRealGameTime() >= 140) ||
+            _difficultyLevel == 5 && (_score >= 60 || GetRealGameTime() >= 160) ||
+            _difficultyLevel == 6 && (_score >= 100 || GetRealGameTime() >= 300))
+        {
+            IncreaseDifficulty();
+        }
+    }
+
+    private void IncreaseDifficulty()
+    {
+        var previousDifficulty = _difficultyLevel;
+        _difficultyLevel = Mathf.Min(_difficultyLevel + 1, MaxDifficulty);
+
+        if (previousDifficulty != _difficultyLevel)
+        {
+            if (_difficultyLevel == 1)
+            {
+                _spawners[0].SetDifficultyLevel(2);
+            }
+            if (_difficultyLevel == 2)
+            {
+                _spawners[0].SetDifficultyLevel(2);
+                AddSpawner();
+                //LimitBar.IncreaseHeight(0.1f);
+            }
+            if (_difficultyLevel == 3)
+            {
+                _spawners[1].SetDifficultyLevel(2);
+                //LimitBar.IncreaseHeight(0.1f);
+            }
+            if (_difficultyLevel == 4)
+            {
+                AddSpawner();
+                _spawners[0].SetDifficultyLevel(3);
+                //LimitBar.IncreaseHeight(0.1f);
+            }
+            if (_difficultyLevel == 5)
+            {
+                _spawners[2].SetDifficultyLevel(2);
+                _spawners[1].SetDifficultyLevel(3);
+                //LimitBar.IncreaseHeight(0.1f);
+            }
+            if (_difficultyLevel == 6)
+            {
+                _spawners[2].SetDifficultyLevel(3);
+                _spawners[0].SetDifficultyLevel(4);
+                _spawners[1].SetDifficultyLevel(4);
+                //LimitBar.IncreaseHeight(0.1f);
+            }
+            if (_difficultyLevel == 7)
+            {
+                _spawners[2].SetDifficultyLevel(4);
+                //LimitBar.IncreaseHeight(0.1f);
+            }
+        }
+    }
+
+    private float GetRealGameTime()
+    {
+        return _gameTimer - _tutorialTimeOffset;
     }
 
     public void Restart()
@@ -85,6 +165,7 @@ public class GameManager : MonoBehaviour
             PickupTutorial.alpha = 0;
             DeliveryTutorial.alpha = 0;
             _tutorialFinished = true;
+            _tutorialTimeOffset = _gameTimer;
         }
 
         if (_firstScore)
@@ -101,8 +182,8 @@ public class GameManager : MonoBehaviour
 
     public void AddSpawner()
     {
-        if (SpawnerHolders.Count >= _spawners.Count)
-            Instantiate(SpawnerPrefab, SpawnerHolders[_spawners.Count]);
+        if (SpawnerHolders.Count > _spawners.Count)
+            _spawners.Add(Instantiate(SpawnerPrefab, SpawnerHolders[_spawners.Count]).GetComponent<PackageSpawner>());
     }
 
     public void GameOver(bool notAPackageDeath = false)
@@ -112,7 +193,7 @@ public class GameManager : MonoBehaviour
         if (notAPackageDeath)
         {
             Debug.Log("Warning, you can't be considered as a package!");
-            GameOverSubText.text = "You died from a bad fall, sad story...";
+            GameOverSubText.text = "You died from a bad fall, sad story...\nThis place is for packages only, please be careful";
         }
 
         Debug.Log("Game Over!");

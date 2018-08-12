@@ -700,7 +700,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.6046941, y: 0.022683786}
-    oldSize: {x: 0.18, y: 0.53}
+    oldSize: {x: 0.12, y: 0.36}
     newSize: {x: 0.12, y: 0.36}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -864,6 +864,14 @@ Prefab:
     - target: {fileID: 4554279657043336, guid: 397b0b496a1b6174c8c90434c694375b, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615253554320980, guid: 397b0b496a1b6174c8c90434c694375b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.209
+      objectReference: {fileID: 0}
+    - target: {fileID: 4082647853252182, guid: 397b0b496a1b6174c8c90434c694375b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.152
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 397b0b496a1b6174c8c90434c694375b, type: 2}
@@ -1724,7 +1732,9 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 42
+  m_text: '0
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7a1ae28ec4a88a1479dd4bd77f407b8e, type: 2}
   m_sharedMaterial: {fileID: 21567524529996820, guid: 7a1ae28ec4a88a1479dd4bd77f407b8e,
@@ -1795,7 +1805,7 @@ MonoBehaviour:
     textComponent: {fileID: 0}
     characterCount: 2
     spriteCount: 0
-    spaceCount: 0
+    spaceCount: 1
     wordCount: 1
     linkCount: 0
     lineCount: 1
@@ -2698,7 +2708,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.6046941, y: 0.022683786}
-    oldSize: {x: 0.18, y: 0.53}
+    oldSize: {x: 0.12, y: 0.36}
     newSize: {x: 0.12, y: 0.36}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2903,11 +2913,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4758617098834520, guid: 1156003edbe1cd5468191be952092a1c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.04
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4758617098834520, guid: 1156003edbe1cd5468191be952092a1c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.66
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4758617098834520, guid: 1156003edbe1cd5468191be952092a1c, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3462,8 +3472,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -62}
-  m_SizeDelta: {x: 0, y: -267.25}
+  m_AnchoredPosition: {x: 0, y: -109.100006}
+  m_SizeDelta: {x: 0, y: -361.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1479202324
 MonoBehaviour:
@@ -5013,8 +5023,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: -267.25}
+  m_AnchoredPosition: {x: 0, y: -34.5}
+  m_SizeDelta: {x: 0, y: -336.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2141991930
 MonoBehaviour:
@@ -5035,7 +5045,9 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: You died drowned under a mountain of packages...
+  m_text: 'You died drowned under a mountain of packages...
+
+    This place is for package only, please be careful'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 294188f738a83434f8031b5206706c6e, type: 2}
   m_sharedMaterial: {fileID: 21370434023125960, guid: 294188f738a83434f8031b5206706c6e,
@@ -5104,12 +5116,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2141991930}
-    characterCount: 48
+    characterCount: 98
     spriteCount: 0
-    spaceCount: 7
-    wordCount: 8
+    spaceCount: 16
+    wordCount: 17
     linkCount: 0
-    lineCount: 1
+    lineCount: 2
     pageCount: 1
     materialCount: 2
   m_havePropertiesChanged: 0
