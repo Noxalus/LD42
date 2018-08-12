@@ -25,7 +25,7 @@ public class PackageSpawner : MonoBehaviour
                 break;
 
             Instantiate(PackagePrefabs[Random.Range(0, PackagePrefabs.Count)], transform.position, Quaternion.identity);
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(Random.Range(1, 10));
         }
     }
 }

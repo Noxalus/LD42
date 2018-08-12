@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
 
     public CanvasGroup GameOverUIGroup;
 
+    public Animator ScoreAnimator;
+
     private int _score;
     private float _gameTimer;
     private bool _gameIsOver = false;
@@ -53,6 +55,7 @@ public class GameManager : MonoBehaviour
     public void IncreaseScore(int amount)
     {
         _score += amount;
+        ScoreAnimator.SetTrigger("ScoreIncreased");
     }
 
     public void GameOver(bool notAPackageDeath = false)
@@ -78,7 +81,7 @@ public class GameManager : MonoBehaviour
 
     private void UpdateUI()
     {
-        TimerText.text = TimeSpan.FromSeconds(_gameTimer).ToString(@"mm\:ss\.fff");
+        TimerText.text = TimeSpan.FromSeconds(_gameTimer).ToString(@"mm\:ss");
         ScoreText.text = _score.ToString();
     }
 
